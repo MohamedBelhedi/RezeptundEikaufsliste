@@ -1,0 +1,32 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<div class="row">
+    <div class="col-xs-12">
+        <form action="">
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="name">Name</label>
+                    <input 
+                    type="text"
+                     id="name" 
+                     class="form-control"
+                     #nameinput>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="anzahl">Anzahl</label>
+                    <input 
+                    type="number" 
+                    id="anzahl" 
+                    class="form-control"
+                    #amoutinput>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                <button class="btn btn-success" type="submit" (click)="onAdd()">Hinzufügen</button>
+                <button class="btn btn-danger" type="button">Löschen</button>
+                <button class="btn btn-primary" type="button">leeren</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

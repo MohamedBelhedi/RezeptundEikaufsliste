@@ -1,0 +1,41 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<div class="row">
+    <div class="col-xs-12">
+        <img [src]="rezepte.imagePath" alt=" {{rezepte.name}}" class="img-responsive">
+
+    </div>
+    <div class="col-xs-12">
+        <h1>{{rezepte.name}}</h1>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle">Rezept bearbeiten
+
+            </button>
+
+            <ul class="dropdown-menu">
+                <li><a href="">Zutaten Hinzufügen</a></li>
+                <li><a href="">rezept bearbeiten</a></li>
+                <li><a href="">löschen</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{rezepte.description}}
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="col-xs">
+        Zutaten
+    </div>
+    
+</div>
