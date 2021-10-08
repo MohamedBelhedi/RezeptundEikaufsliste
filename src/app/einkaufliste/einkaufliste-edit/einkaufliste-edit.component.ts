@@ -21,6 +21,7 @@ export class EinkauflisteEditComponent implements OnInit {
     const zutatenAmount=this.amountinputRef.nativeElement.value;
     const neuZutaten=new Zutaten(zutatenName,zutatenAmount);
     this.zutatenHinzufügen.emit(neuZutaten)
+    return false;
 
   }
 

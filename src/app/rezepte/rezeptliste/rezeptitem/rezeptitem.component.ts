@@ -16,7 +16,10 @@ export class RezeptitemComponent implements OnInit {
   ngOnInit(): void {
   }
   onSelect(){
-    this.rezeptSelected.emit();
+    this.rezeptSelected.emit();    
+    // im falle eines Autorefreshes kann man immer sich mit return false behelfen 
+    
+    return false;
 
   }
 

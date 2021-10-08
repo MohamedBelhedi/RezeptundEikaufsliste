@@ -9,9 +9,12 @@ import {Rezepte} from './rezepte.model'
 export class RezepteComponent implements OnInit {
   selectedRezepte!:Rezepte;
 
+
   constructor() { }
 
   ngOnInit(): void {
+   
   }
 
+  
 }
