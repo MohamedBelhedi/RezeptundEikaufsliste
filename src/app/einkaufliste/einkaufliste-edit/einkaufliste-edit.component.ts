@@ -12,7 +12,7 @@ export class EinkauflisteEditComponent implements OnInit {
  @ViewChild('amountinput') amountinputRef!:ElementRef;
  @ViewChild('ul') ulElement!: ElementRef;
  @Output() zutatenHinzufügen= new EventEmitter<Zutaten>();
- @Output() deleteRequest= new EventEmitter<Zutaten>();
+//  @Output() deleteRequest= new EventEmitter<Zutaten>();
  
  
   
@@ -35,8 +35,9 @@ onLeer(){
 
   // this.ulElement.nativeElement.remove()
   const element=document.getElementById("ul");
-  element!.innerHTML="<style> text-decoration: line-through;</style>";
-  return element
+  element!.outerHTML=""
+  // element!.innerHTML="<style> text-decoration: line-through;</style>";
+ 
   // element?.classList.remove("list-group-item")
   // const zutatenName=this.nameinputRef.nativeElement.value;
   // const zutatenAmount=this.amountinputRef.nativeElement.value;
