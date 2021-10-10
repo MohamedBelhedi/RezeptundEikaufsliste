@@ -36,6 +36,7 @@ onLeer(){
   // this.ulElement.nativeElement.remove()
   const element=document.getElementById("ul");
   element!.outerHTML=""
+  return true
   // element!.innerHTML="<style> text-decoration: line-through;</style>";
  
   // element?.classList.remove("list-group-item")
