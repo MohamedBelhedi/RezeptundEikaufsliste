@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit,ViewChild,EventEmitter,Output } from '@angular/core';
+
+import { Component, ElementRef, OnInit,ViewChild,EventEmitter,Output, Renderer2 } from '@angular/core';
 import { Zutaten } from 'src/app/shared/zutaten.model';
 
 @Component({
@@ -9,7 +10,11 @@ import { Zutaten } from 'src/app/shared/zutaten.model';
 export class EinkauflisteEditComponent implements OnInit {
  @ViewChild('nameinput') nameinputRef!:ElementRef;
  @ViewChild('amountinput') amountinputRef!:ElementRef;
+ @ViewChild('ul') ulElement!: ElementRef;
  @Output() zutatenHinzufügen= new EventEmitter<Zutaten>();
+ @Output() deleteRequest= new EventEmitter<Zutaten>();
+ 
+ 
   
   constructor() { }
 
@@ -21,9 +26,34 @@ export class EinkauflisteEditComponent implements OnInit {
     const zutatenAmount=this.amountinputRef.nativeElement.value;
     const neuZutaten=new Zutaten(zutatenName,zutatenAmount);
     this.zutatenHinzufügen.emit(neuZutaten)
-    return false;
+    return true;
 
   }
+onLeer(){
 
+  // this.renderer2.removeChild(this.el.nativeElement,this.ulElement.nativeElement)
+
+  // this.ulElement.nativeElement.remove()
+  const element=document.getElementById("ul");
+  element!.innerHTML="<style> text-decoration: line-through;</style>";
+  return element
+  // element?.classList.remove("list-group-item")
+  // const zutatenName=this.nameinputRef.nativeElement.value;
+  // const zutatenAmount=this.amountinputRef.nativeElement.value;
+  // const neuZutaten=new Zutaten(zutatenName,zutatenAmount);
+  // this.deleteRequest.emit(neuZutaten)
+  // this.displayNone=this.displayNone ? '':'none'
+
+  // var wort=document.querySelector(".list-group");
+// if(wort!==null){
+//   wort.classList.remove(".list-group")
 
 }
+
+
+
+  
+}
+
+
+

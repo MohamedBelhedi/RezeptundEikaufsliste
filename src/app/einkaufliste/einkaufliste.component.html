@@ -3,14 +3,19 @@
 <div class="row">
     <div class="col-xs-10">
         <app-einkaufliste-edit
-        (zutatenHinzufügen)="onZutatenAdded($event)"></app-einkaufliste-edit>
+        (zutatenHinzufügen)="onZutatenAdded($event)" ></app-einkaufliste-edit>
         <hr>
-       <ul class="list-group">
-           <a class="list-group-item" 
+       <ul class="list-group" id="ul" #ul >
+        <!-- id="ul" -->
+           <a class="list-group-item"
+           
            style="cursor:pointer;"
-           *ngFor="let zutaten of zutaten"
-           >
+           *ngFor="let zutaten of zutaten"  
+           #ul1  >
+
            {{zutaten.name}}({{zutaten.anzahl}})
+           <span class="x" (click)="ul1.remove()">&#10060;</span>
+           
         </a>
            
            
