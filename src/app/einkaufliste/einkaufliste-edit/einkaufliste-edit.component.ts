@@ -36,7 +36,7 @@ onLeer(){
   // this.ulElement.nativeElement.remove()
   const element=document.getElementById("ul");
   element!.outerHTML=""
-  return true
+  return alert("Nach dem leeren des Zutatenfeldes,bitte die Seite aktuellisieren mit dem ↪ oder mit STRG+R")
   // element!.innerHTML="<style> text-decoration: line-through;</style>";
  
   // element?.classList.remove("list-group-item")

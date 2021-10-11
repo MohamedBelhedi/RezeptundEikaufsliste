@@ -9,6 +9,7 @@ import { Rezepte } from '../rezepte.model';
 export class RezeptdetailsComponent implements OnInit {
   // @Output() rezepte!:Rezepte
   @Input() rezepte!:Rezepte
+  collapsed=true;
 
   constructor() { }
 
