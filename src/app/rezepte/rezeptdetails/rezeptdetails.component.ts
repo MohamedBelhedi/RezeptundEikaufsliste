@@ -1,4 +1,4 @@
-import { Component, OnInit,Input,Output } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Rezepte } from '../rezepte.model';
 
 @Component({
@@ -8,12 +8,18 @@ import { Rezepte } from '../rezepte.model';
 })
 export class RezeptdetailsComponent implements OnInit {
   // @Output() rezepte!:Rezepte
+  @Output() featureSelected= new EventEmitter<string>();
   @Input() rezepte!:Rezepte
   collapsed=true;
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
+  onSelect(feature:string){
+    this.featureSelected.emit(feature)
+
+}
 
 }

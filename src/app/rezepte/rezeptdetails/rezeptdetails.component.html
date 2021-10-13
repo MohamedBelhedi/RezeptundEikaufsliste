@@ -16,9 +16,9 @@
 
             </button>
 
-            <ul class="dropdown-menu" [class.dropdown-menu]="collapsed" (window:resize)="collapsed=true">
+            <ul (click)="collapsed=!collapsed" class="dropdown-menu" [class.dropdown-menu]="collapsed" (window:resize)="collapsed=true">
                 <li><a href="">Zutaten Hinzufügen</a></li>
-                <li><a href="">rezept bearbeiten</a></li>
+                <li><a href="" (click)="onSelect('rezepte')">rezept bearbeiten</a></li>
                 <li><a href="">löschen</a></li>
             </ul>
 
